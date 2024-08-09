@@ -1,6 +1,6 @@
 #streamlit run app.py
 import streamlit as st
-from pymongo import MongoClient
+import pymongo
 from dotenv import load_dotenv
 import os
 import hashlib
@@ -18,8 +18,7 @@ load_dotenv()
 mongo_url = os.getenv("MONGO_PWD_URL")
 
 # MongoDB setup 
-client = MongoClient(mongo_url)
-
+client = pymongo.MongoClient(f"mongodb+srv://test:{st.secrets['MONGODB_PASSWORD']}@cluster0.47ozeut.mongodb.net/")
  
 db = client["workflow_management"]
 
@@ -108,7 +107,7 @@ def login_page():
         if user:
             st.session_state["logged_in"] = True
             st.session_state["user"] = user
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.error("Invalid email or password")
 
