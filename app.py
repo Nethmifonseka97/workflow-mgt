@@ -1,6 +1,8 @@
 #streamlit run app.py
 import streamlit as st
 from pymongo import MongoClient
+from dotenv import load_dotenv
+import os
 import hashlib
 from datetime import datetime, timedelta
 import plotly.graph_objects as go
@@ -9,8 +11,14 @@ import string
 import random
 
 
+# Load environment variables from the .env file
+load_dotenv()
+
+# Get the MongoDB connection URL from the environment variable
+mongo_url = os.getenv("MONGO_PWD_URL")
+
 # MongoDB setup 
-# client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient(mongo_url)
 
  
 db = client["workflow_management"]
