@@ -1,0 +1,121 @@
+/* Primary color for buttons, headers, and accents */
+:root {
+    --primary-color: #dfe6f2;
+    --background-color: #64a1ea;
+    --secondary-background-color: #c8ddf1;
+    --text-color: #000a5a;
+    /* --font-family: 'serif'; */
+}
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    /* font-family: var(--font-family); */
+}
+
+
+
+/* style.css 
+
+[theme]
+[theme]
+base="light"
+primaryColor="#64a1ea"
+secondaryBackgroundColor="#c8ddf1"
+textColor="#000a5a"
+font="serif"
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #1f2d3d;
+}
+
+.stMarkdown {
+    color: #34495e;
+
+}
+primaryColor="#f0ebf1"
+backgroundColor="#c5ecf7"
+secondaryBackgroundColor="#ffffff"
+textColor="#020150"
+font="serif"    
+*/
+
+/* Header styles */
+
+
+h1 {
+    font-size: 2.5em; /* Larger font size for main titles */
+    padding: 0px;
+    margin: -45px 0;
+    
+}
+
+h2 {
+    font-size: 1.8em; /* Slightly smaller for sub-titles */
+    padding: 0px;
+    margin: 15px 0;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 1.8em; /* Further reduced size */
+    padding: 0px;
+    margin: 15px 0;
+    margin-top: 30px;
+
+}
+
+h4, h5, h6 {
+    font-size: 1.5em; /* Uniform smaller size for lower headers */
+    padding: 0px;
+    margin: 15px 0;
+    margin-top: 50px;
+
+}
+
+.project-id-box {
+    background-color: #b7d4f0; /* Light blue background */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    width : 150px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+/* Styles for custom metric display */
+.metric-box {
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.metric-total-tasks {
+    background-color: #ADD8E6; /* Blue */
+    color: #044c64;
+}
+
+.metric-completed-tasks {
+    background-color: #CCFFCC; /* Green */
+    color: #004c00;
+}
+
+.metric-ongoing-tasks {
+    background-color: #FFFF99; /* Yellow */
+    color: #845903;
+}
+
+.metric-not-started-tasks {
+    background-color: #c0c0c0; /* Grey */
+    color: #3a3838;
+}
+
+.metric-overdue-tasks {
+    background-color: #FFCCCC; /* Red */
+    color: #770303;
+}
+
